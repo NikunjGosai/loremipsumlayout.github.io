@@ -1,0 +1,27 @@
+{
+  "name": "LogoIpsum",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "watch:sass": "sass scss/:css/bundle --watch --no-source-map",
+    "watch:postcss": "postcss css/bundle -d css/ --watch",
+    "build": "concurrently \"npm run watch:sass\" \"npm run watch:postcss\""
+  },
+  "keywords": [
+    "html",
+    "css",
+    "scss"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "concurrently": "^8.0.1",
+    "cssnano": "^6.0.1",
+    "postcss": "^8.4.23",
+    "postcss-cli": "^10.1.0",
+    "postcss-combine-media-query": "^1.0.1",
+    "postcss-sort-media-queries": "^5.1.0",
+    "sass": "^1.62.1"
+  }
+}

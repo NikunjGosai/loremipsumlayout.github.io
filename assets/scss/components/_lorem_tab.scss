@@ -1,0 +1,71 @@
+.lorem-tab-wrapper {
+    margin-bottom: 220px;
+
+    @include breakpoint("md") {
+        margin-bottom: 80px;
+    }
+
+    @include breakpoint("sm") {
+        margin-bottom: 60px;
+    }
+
+    @include breakpoint("xs") {
+        margin-bottom: 40px;
+    }
+}
+
+.lorem-tab {
+    &__btns {
+        display: flex;
+        align-items: center;
+    }
+
+    &__btn-1, &__btn-2 {
+        background-color: #eee;
+        padding: 20px 60px;
+        color: $black;
+        font-size: 20px;
+        font-weight: 400;
+        cursor: pointer;
+        transition: all .5s;
+
+        @include breakpoint("sm") {
+            padding: 15px 45px;
+            font-size: 16px;
+        }
+
+        @include breakpoint("xs") {
+            padding: 15px 35px;
+            font-size: 14px;
+        }
+    }
+
+    &__contents {
+        background: $white;
+        border: 2px solid #ddd;
+        box-shadow: 0px 1px 8px 1px #ddd;
+        padding: 40px;
+
+        @include breakpoint("sm") {
+            padding: 20px;
+        }
+
+        @include breakpoint("xs") {
+            padding: 15px;
+        }
+    }
+}
+
+.tablinks.active {
+    background-color: #d73a3a;
+    color: $white;
+} 
+
+.lorem-tab__btn-1:hover, .lorem-tab__btn-2:hover {
+    @media (hover: hover) {
+        &:hover {
+            background-color: $black;
+            color: $white;
+        }
+    }
+}

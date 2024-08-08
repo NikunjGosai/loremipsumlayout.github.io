@@ -1,0 +1,225 @@
+.header {
+    background-color: $black;
+    padding: 15px 0;
+
+    @include breakpoint("xs") {
+        padding: 10px 0;
+    }
+
+    &__inner-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    &__logo-wrap {
+        width: 275px;
+
+        @include breakpoint("sm") {
+            width: 180px;
+        }
+
+        @include breakpoint("xs") {
+            width: 140px;
+        }
+    }
+
+    &__nav-list {
+        display: flex;
+        align-items: center;
+
+        @include breakpoint("sm") {
+            display: none;
+        }        
+    }
+
+    &__nav-item {
+        margin-right: 80px;
+
+        @include breakpoint("md") {
+            margin-right: 55px;
+        }
+
+        @include breakpoint("sm") {
+            margin-right: 0;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__nav-item a, &__nav-dropdwon-item a {
+        color: $white;
+        font-size: 18px;
+        font-weight: 500;
+        transition: all .5s;
+
+        @include breakpoint("sm") {
+            font-size: 16px;
+        }
+
+        @include breakpoint("xs") {
+            font-size: 14px;
+        }
+    }
+
+    &__nav-item a:hover, &__nav-dropdwon-item a:hover {
+        color: $primary;
+    }
+
+    &__nav-item span {
+        position: relative;
+    }
+
+    &__nav-item span::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid $white;
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        border-radius: 3px;
+
+        @include breakpoint("md") {
+            left: 5px;
+        }
+
+        @include breakpoint("sm") {
+            display: none;
+        }
+    }    
+    
+    &__nav-item span::after {
+        display: none;
+    }
+
+    &__nav-item:first-child {
+        position: relative;
+    }
+
+    &__nav-link.active span::before {
+        display: none;
+    }
+
+    &__nav-link.active span::after {
+        display: block;
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid $white;
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        border-radius: 3px;
+
+        @include breakpoint("md") {
+            left: 5px;
+        }
+
+        @include breakpoint("sm") {
+            display: none;
+        }
+    }
+
+    &__nav-dropdwon-list {
+        display: none;
+    }
+
+    &__nav-dropdwon-list.active {
+        display: block;
+        width: 150px;
+        height: 100px;
+        position: absolute;
+        left: 0;
+        top: 57px;
+        background-color: $black;
+        padding: 15px;
+        text-align: center;
+
+        @include breakpoint("sm") {
+            display: none;
+        }
+    }
+
+    &__nav-dropdwon-item {
+        margin-bottom: 10px;
+    }
+
+    &__hamburger-list {
+        display: none;
+
+        @include breakpoint("sm") {
+            display: block;
+            cursor: pointer;
+            width: 26px;
+            height: 26px;
+            position: absolute;
+            right: 0;
+            top: 8px;
+        }
+
+        @include breakpoint("sm") {
+            display: block;
+            cursor: pointer;
+            width: 26px;
+            height: 26px;
+            position: absolute;
+            right: 0;
+            top: 8px;
+        }
+
+        @include breakpoint("xs") {
+            top: 3px;
+        }
+    }
+
+    &__hamburger-close {
+        @include breakpoint("sm") {
+            display: none;
+        }
+    }
+
+    &__hamburger-list.active &__hamburger-btn {
+        @include breakpoint("sm") {
+            display: none;
+        }
+    }
+
+    &__hamburger-list.active &__hamburger-close {
+        @include breakpoint("sm") {
+            display: block;
+        }
+    }
+
+    &__nav-list.active {
+        @include breakpoint("sm") {
+            display: block;
+            width: 200px;
+            height: auto;
+            position: absolute;
+            right: 0;
+            top: 57px;
+            background-color: $black;
+            padding: 15px;
+
+        }
+
+        @include breakpoint("xs") {
+            width: 180px;
+            top: 42px;
+        }
+    }
+        
+    &__nav-item:last-child {
+        margin-right: 0;
+
+        @include breakpoint("sm") {
+            margin-bottom: 0;
+        }
+    }
+}

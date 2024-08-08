@@ -1,0 +1,14 @@
+/* media-query mixin */
+@mixin breakpoint($width) {
+  @media only screen and (max-width: map-get($breakpoints, $width)) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}

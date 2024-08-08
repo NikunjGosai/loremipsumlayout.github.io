@@ -1,0 +1,142 @@
+.footer {
+    background-color: $black;
+    padding: 40px 0;
+
+    @include breakpoint("sm") {
+        padding: 30px 0;
+    }
+
+    &__subs-btn {
+        background-color: $primary;
+        width: 200px;
+        height: 40px;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+        font-size: 16px;
+        font-weight: 500;
+        margin: 0 auto 40px;
+        transition: all .5s;
+
+        @include breakpoint("sm") {
+            width: 160px;
+            border-radius: 20px;
+            margin: 0 auto 30px;
+        }
+
+        @include breakpoint("xs") {
+            width: 140px;
+            font-size: 14px;
+        }
+    }
+
+    &__subs-btn:hover {
+        background: transparent;
+        border: 1px solid $primary;
+        color: $primary;
+    }
+
+    &__nav-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px;
+
+        @include breakpoint("sm") {
+            margin-bottom: 30px;
+        }        
+
+        @include breakpoint("xs") {
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__nav-item {
+        padding-right: 100px;
+        position: relative;
+
+        @include breakpoint("sm") {
+            padding-right: 70px;
+        }   
+        
+        @include breakpoint("xs") {
+            padding-right: 15px;
+            margin-bottom: 20px;
+        }   
+    }
+
+    &__nav-item a {
+        color: $white;
+        font-size: 18px;
+        font-weight: 500;
+        transition: all .5s;
+
+        @include breakpoint("sm") {
+            font-size: 16px;
+        }
+
+        @include breakpoint("xs") {
+            font-size: 14px;
+        }
+    }
+
+    &__nav-item a:hover {
+        color: $primary;
+    }
+
+    &__nav-item:nth-child(2)::before {
+        content: "";
+        background-color: $white;
+        width: 2px;
+        height: 20px;
+        position: absolute;
+        left: -50px;
+        top: 0;
+
+        @include breakpoint("sm") {
+            left: -35px;
+        }     
+
+        @include breakpoint("xs") {
+            display: none;
+        }   
+    }
+
+    &__nav-item:nth-child(2)::after {
+        content: "";
+        background-color: $white;
+        width: 2px;
+        height: 20px;
+        position: absolute;
+        right: 50px;
+        top: 0;
+
+        @include breakpoint("sm") {
+            right: 35px;
+        } 
+        
+        @include breakpoint("xs") {
+            display: none;
+        }   
+    }
+
+    &__nav-item:last-child {
+        padding-right: 0;
+    }
+
+    &__logo-wrap {
+        width: 275px;
+        margin: auto;
+
+        @include breakpoint("sm") {
+            width: 180px;
+        }
+
+        @include breakpoint("xs") {
+            width: 140px;
+        }
+    }
+}

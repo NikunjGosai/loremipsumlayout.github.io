@@ -1,0 +1,61 @@
+.lorem-print-wrapper {
+    margin-bottom: 80px;
+
+    @include breakpoint("sm") {
+        margin-bottom: 60px;
+    }
+
+    @include breakpoint("xs") {
+        margin-bottom: 40px;
+    }
+
+    .comm-title {
+        margin-bottom: 40px;
+
+        @include breakpoint("sm") {
+            margin-bottom: 30px;
+        }
+
+        @include breakpoint("xs") {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.lorem-print {
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include breakpoint("xs") {
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        @include breakpoint("xs") {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__item:last-child {
+        @include breakpoint("xs") {
+            margin-bottom: 0;
+        }
+    }
+
+    &__img {
+        width: 80px;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include breakpoint("sm") {
+            width: 60px;
+        }
+    }
+}

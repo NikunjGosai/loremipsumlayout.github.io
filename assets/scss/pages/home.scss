@@ -1,0 +1,17 @@
+/* comment abstracts */
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+/* comment base */
+@import '../base/reset';
+@import '../base/base';
+
+/* components */
+@import '../components/header';
+@import '../components/footer';
+@import '../components/banner';
+@import '../components/lorem_printing';
+@import '../components/lorem_section_1';
+@import '../components/lorem_section_2';
+@import '../components/lorem_tab';
+
